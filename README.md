@@ -40,14 +40,14 @@ Just a summary of all the Linux commands that you typically will need for your s
   iotop -> like top but for I/O ( you will need to install sysstat package for this)
 
 ### What set of files does a process/user have open ?
-  lsof -p
+  lsof -p pid
 
 ### Check what are the various process running
   ps -ef ( for your permitted level)
   ps -aux ( for all the users in the systems)
 
 ### Give me a process hierarchy given a parent process id
-  pstree -p <pid>
+  pstree -p pid
 
 ### Check the num of threads of a given process
   check in /proc/<pid>/status
@@ -62,11 +62,11 @@ Just a summary of all the Linux commands that you typically will need for your s
   dmidecode
 
 ### There are other popular tools that I haven't talked about as I havent used them myself :) -
-  pidstat
-  nicstat
-  dtrace
-  pmstat
-  ethtool
+    pidstat
+    nicstat
+    dtrace
+    pmstat
+    ethtool
 
 ### Can my user create dumps ?
   ulimit
@@ -76,19 +76,19 @@ Just a summary of all the Linux commands that you typically will need for your s
 
 
 ### Networking troubleshooting
-  ping
-  dig
-  traceroute
-  arping
-  ip a
-  ip route show
+    ping
+    dig
+    traceroute
+    arping
+    ip a
+    ip route show
 
 ### Which process is listening on what ports ?
-  ss -tuna
-  netstat -an
+    ss -tuna
+    netstat -an
 
 ### Check if selinux is enabled ?
-  getenforce
+    getenforce
 
 ### Check what the hung process is upto
-  strace -p <pid>
+    strace -p <pid>
