@@ -3,63 +3,63 @@ Just a summary of all the Linux commands that you typically will need for your s
 
 
 ### Check which OS you are on ?
-  cat /etc/*release
+    cat /etc/*release
 
 ### Check free memory
-  free -kh
+    free -kh
 
 ### Check disk usage
-  df -kh
+    df -kh
 
 ### Check space consumed by any directory/file.
-  du -kh
+    du -kh
 
 
 ### Check num of cpus.
-  lscpu
-  cat /proc/cpuinfo
-  nproc
+    lscpu
+    cat /proc/cpuinfo
+    nproc
 
 ### Check general system health
-  top -> very easy to spot high cpu and memory usage.
-  You can sort by cpu/mem usage . hit h for more help
+    top -> very easy to spot high cpu and memory usage.
+    You can sort by cpu/mem usage . hit h for more help
 
-  *TIP* You can also identify I/O issue here->
-  On the top, you will see %Cpu(s) - If the number for "wa" is higher => that means you have an I/O issue.
-  wa -> The amount of time cpu does nothing waiting for an I/O operation
+    *TIP* You can also identify I/O issue here->
+    On the top, you will see %Cpu(s) - If the number for "wa" is higher => that means you have an I/O issue.
+    wa -> The amount of time cpu does nothing waiting for an I/O operation
 
-  *TIP* top/uptime shows "load average". check youtube for what it is and how its calculated :)  
+    *TIP* top/uptime shows "load average". check youtube for what it is and how its calculated :)  
 
 ### Check what are all the various disks/mounts you have
-   lsblk
+    lsblk
 
 ### Check for I/O issue ?
-  iostat 1-> runs iostat every 1 second
-  You will figure out if any high activity happens with I/O with this.
+    iostat 1-> runs iostat every 1 second
+    You will figure out if any high activity happens with I/O with this.
 
-  iotop -> like top but for I/O ( you will need to install sysstat package for this)
+    iotop -> like top but for I/O ( you will need to install sysstat package for this)
 
 ### What set of files does a process/user have open ?
-  lsof -p pid
+    lsof -p pid
 
 ### Check what are the various process running
-  ps -ef ( for your permitted level)
-  ps -aux ( for all the users in the systems)
+    ps -ef ( for your permitted level)
+    ps -aux ( for all the users in the systems)
 
 ### Give me a process hierarchy given a parent process id
-  pstree -p pid
+    pstree -p pid
 
 ### Check the num of threads of a given process
-  check in /proc/<pid>/status
+    check in /proc/<pid>/status
 
 ### My service has issues.
-  journalctl -u <service_name>
+    journalctl -u <service_name>
 
 ### Check kernel for any issues.
-  dmesg
+    dmesg
 
 ### Bios and other h/w info
-  dmidecode
+    dmidecode
 
 ### There are other popular tools that I haven't talked about as I havent used them myself :) -
     pidstat
@@ -69,10 +69,10 @@ Just a summary of all the Linux commands that you typically will need for your s
     ethtool
 
 ### Can my user create dumps ?
-  ulimit
+    ulimit
 
 ### Check inode information for my block device
-  df -i
+    df -i
 
 
 ### Networking troubleshooting
