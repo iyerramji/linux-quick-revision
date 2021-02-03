@@ -74,6 +74,9 @@ Just a summary of all the Linux commands that you typically will need for your s
 ### Check inode information for my block device
     df -i
 
+### Check inode # for file ( inode info stored on the disk)
+    ls -i <file_name>
+
 
 ### Networking troubleshooting
     ping
@@ -92,3 +95,6 @@ Just a summary of all the Linux commands that you typically will need for your s
 
 ### Check what the hung process is upto
     strace -p <pid>
+
+### Identify cpu activity
+    vmstat 1 => gives a lot of detail like si/so etc. check man page for it.
