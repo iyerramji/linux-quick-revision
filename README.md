@@ -77,7 +77,6 @@ Just a summary of all the Linux commands that you typically will need for your s
 ### Check inode # for file ( inode info stored on the disk)
     ls -i <file_name>
 
-
 ### Networking troubleshooting
     ping
     dig
@@ -105,3 +104,8 @@ Just a summary of all the Linux commands that you typically will need for your s
 
 ### get/create cert of a webserver
     openssl
+
+### How will you clear a huge log file ?
+    echo "" > mylogfile
+    *TIP* removing a file doesn't change the inode.
+    All the open file handles of the applications need to be closed inorder for it to be deleted. The file still remains!
