@@ -98,3 +98,10 @@ Just a summary of all the Linux commands that you typically will need for your s
 
 ### Identify cpu activity
     vmstat 1 => gives a lot of detail like si/so etc. check man page for it.
+
+### How to kill zombie process(s)
+    send a SIGCHILD signal to the parent process
+    If that doesnt work, reboot the system
+
+### get/create cert of a webserver
+    openssl
