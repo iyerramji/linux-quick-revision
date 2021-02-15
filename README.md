@@ -109,3 +109,18 @@ Just a summary of all the Linux commands that you typically will need for your s
     echo "" > mylogfile
     *TIP* removing a file doesn't change the inode.
     All the open file handles of the applications need to be closed inorder for it to be deleted. The file still remains!
+
+### Why swapping is bad ?
+    increases latency of the app running on the host
+
+### ping localhost and www.google.com works but not  - ping mailserver
+    nsswitch.conf is responsible for it
+
+### Linux boot steps ( keywords only) -
+    BIOS/UEFI ( POST)
+    bootloader from MBR
+    chroot kernel
+    kernel loads
+    kernel loads drivers
+    initramfs -> user space
+    Kernel launches init/systemd
