@@ -9,7 +9,7 @@ Just a summary of all the Linux commands that you typically will need for your s
     free -kh
 
 ### Check disk usage
-    df -kh
+    df -kh ...if it hangs . Check df -kh on individual mounts ( refer fstab for the entries)
 
 ### Check space consumed by any directory/file.
     du -kh
@@ -17,7 +17,7 @@ Just a summary of all the Linux commands that you typically will need for your s
 
 ### Check num of cpus.
     lscpu
-    cat /proc/cpuinfo
+    cat /proc/cpuinfo  => to check what frequency is the cpu operating at.
     nproc
 
 ### Check general system health
@@ -78,6 +78,7 @@ Just a summary of all the Linux commands that you typically will need for your s
     ls -i <file_name>
 
 ### Networking troubleshooting
+    ping -s CUSTOM_MTU_SIZE => if MTU is not correct, packet transfer will be slow
     ping
     dig
     traceroute
